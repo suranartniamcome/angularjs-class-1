@@ -1,1 +1,5 @@
 .sass-cache
+app/css
+app/js/all.js
+dist
+node_modules

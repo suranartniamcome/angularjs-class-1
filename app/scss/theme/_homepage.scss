@@ -1,0 +1,89 @@
+body {
+	font-family: tahoma;
+}
+
+.header {
+	height: 44px;
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	&__logo {
+		@include font-size(getFontSize('logo'));
+		font-weight: bold;
+	}
+	&__search {
+		height: 44px;
+	}
+}
+.nav {
+	background: getBGColor('lightGrey');
+	border-bottom: 1px solid #eee;
+	padding: 0 10px;
+	&__link {
+		display: block;
+		float:left;
+		margin: 0 5px;
+		padding: 8px 10px;
+		text-transform: uppercase;
+		color: getTextColor('light');
+		@include font-size(getFontSize('nav'));
+		&--active {
+			color: getTextColor('dark');
+			font-weight: bold;
+			border-bottom: 2px solid getBGColor('black');
+		}
+	} 
+}
+
+.search {
+	&__form {
+		float: right;
+		height: 44px;
+	}
+	&__input {
+		// display: none;
+	}
+	&__button {
+		margin: 5px;
+		border-radius: 50%;
+		background: none;
+		border: 0;
+		width: 32px;
+		height: 32px;
+		border: 1px solid #eee;
+	}
+}
+
+.block {
+	&--latest {
+		padding: 10px 0;
+	}
+}
+
+.entry {
+	padding: 15px 20px;
+	border-bottom: 1px solid #eee;
+	&__image {
+		float: left;
+		width: 38%;
+		// margin: 0 0 10px 10px;
+		margin: 0 15px 10px 0;
+		border: 1px solid #eee;
+		.block--read & {
+			width: 100%;
+		}
+	}
+	&__title {
+		@include font-size(getFontSize('title'));
+		margin: 0;
+	}
+	&__excerpt {
+
+	}
+	&__meta {
+		@include font-size(getFontSize('meta'));
+		color: getTextColor('light');
+	}
+	&__author {
+		color: #57ad68;
+	}
+}

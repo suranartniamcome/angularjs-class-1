@@ -1,0 +1,26 @@
+// Sass variables
+$textColor: (
+    'light': #888,
+    'dark': #444,
+);
+$BGColor: (
+    'lightGrey': #FAFAFA,
+    'black': #444
+);
+$fontSize: (
+    'logo': 32,
+    'nav': 12,
+    'title': 18,
+    'meta': 12
+);
+
+// Sass functions to get variables
+@function getTextColor($block) {
+    @return map-get($textColor, $block);
+}
+@function getBGColor($block) {
+    @return map-get($BGColor, $block);
+}
+@function getFontSize($block) {
+    @return map-get($fontSize, $block);
+}
