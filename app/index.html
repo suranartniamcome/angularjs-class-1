@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="sanook">
 
 <head>
     <meta charset="utf-8">
@@ -12,6 +12,7 @@
     <!-- put AngularJS Script here -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.3.11/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.3.11/angular-resource.min.js"></script>
     <!-- end of AngularJS Script -->
     
     <script src="js/all.js"></script>
@@ -19,9 +20,14 @@
 </head>
 
 <body>
-
+    <ul>
+        <li><a href="page/1">Link 1</a></li>
+        <li><a href="page/2">Link 2</a></li>
+        <li><a href="page/3">Link 3</a></li>
+        <li><a href="page/4">Link 4</a></li>
+    </ul>
     <div class="container-fluid">
-        <div></div>
+        <div ng-view></div>
     </div>
 
 </body>
