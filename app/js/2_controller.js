@@ -1,10 +1,9 @@
-// create new module called "myControllers"
-// uses "myServices" module as dependencies
-var myControllers = angular.module('myControllers', ['myServices']);
+var myControllers = angular.module('myControllers', []);
 
-// add controller named "showText"
-// need help from factory named "message" to do a job
-myControllers.controller('showText', ['$scope', 'message', function($scope, message) {
-	// make data available within this controller
-	$scope.name = message.hello('pum');
+myControllers.controller('MainCtrl', ['$scope', function($scope){
+	$scope.page = '1';
+}]);
+
+myControllers.controller('PageCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
+	$scope.page = $routeParams.page;
 }]);
